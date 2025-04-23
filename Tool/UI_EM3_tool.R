@@ -1102,10 +1102,10 @@ server <- function(input, output, session) {
     reactiveVals$tRes2 <- blankVector(reactiveVals$tRes2)
     reactiveVals$tRes3 <- blankVector(reactiveVals$tRes3)
     
-    maxLengthT <- max(length(reactiveVals$gRes1), length(reactiveVals$gRes2), length(reactiveVals$gRes3))
-    vector1T <- c(reactiveVals$gRes1, rep("", maxLengthT - length(reactiveVals$gRes1)))
-    vector2T <- c(reactiveVals$gRes2, rep("", maxLengthT - length(reactiveVals$gRes2)))
-    vector3T <- c(reactiveVals$gRes3, rep("", maxLengthT - length(reactiveVals$gRes3)))
+    maxLengthT <- max(length(reactiveVals$tRes1), length(reactiveVals$tRes2), length(reactiveVals$tRes3))
+    vector1T <- c(reactiveVals$tRes1, rep("", maxLengthT - length(reactiveVals$tRes1)))
+    vector2T <- c(reactiveVals$tRes2, rep("", maxLengthT - length(reactiveVals$tRes2)))
+    vector3T <- c(reactiveVals$tRes3, rep("", maxLengthT - length(reactiveVals$tRes3)))
     dfT <- data.frame(vector1T, vector2T, vector3T)
     colnames(dfT) <- c("Current > Previous", "Previous > Current", "Current = Previous")
     reactiveVals$comparisons[[3]] <- dfT
