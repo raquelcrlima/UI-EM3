@@ -8,11 +8,13 @@ This code is **© R.C.R. Lima, E. Clifford, M.M. Keane, 2025**, and it is made a
 
 If you use this software for an academic publication, provide proper **attribution**, such as shown below:
 
-* **Lima, R.C.R., Clifford, E., Keane, M.M. (2025). UI-EM3 Tool, University of Galway - available at github.com/raquelcrlima/questionnaire-analysis.**
+* **Lima, R.C.R., Clifford, E., Keane, M.M. (2025). UI-EM3 Tool, University of Galway - available at github.com/raquelcrlima/UI-EM3.**
 
 ## APPLICATION
 
 The application (“UI_EM3_tool.R”) and the files needed to run it ("Example Decision-makers.xlsx", "Example Employees.xlsx", "Example School Students.xlsx" and "Example University Students.xlsx") are all located on the “Tool” folder.
+
+Random data files that can be used as example in the application are located on the "Example_Random_Data" folder. These are not actual data collected by the original study, but randomly generated data. The download and use of these files are optional and should be used as example only. If downloaded, they don't need to be located in the same folder as the application (“UI_EM3_tool.R”) in your computer, as they need to be manually input into the tool according to the application's instructions.
 
 ## DOWNLOAD
 
