@@ -30,7 +30,7 @@ jobs:
       - name: Install R packages
         run: |
           Rscript -e 'install.packages("remotes", repos = "https://cran.rstudio.com")'
-          Rscript -e 'remotes::install_version("rsconnect", version = "1.0.0")'
+          Rscript -e 'remotes::install_github("rstudio/rsconnect")'
 
       - name: Deploy to shinyapps.io
         env:
