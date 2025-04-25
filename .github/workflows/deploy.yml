@@ -22,9 +22,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev wget
 
-      - name: Install R packages from CRAN
+      - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("rsconnect"), repos = "https://cran.rstudio.com")'
+          Rscript -e 'install.packages("remotes", repos = "https://cran.rstudio.com")'
+          Rscript -e 'remotes::install_github("rstudio/rsconnect")'
 
       - name: Deploy to shinyapps.io
         env:
@@ -32,10 +33,13 @@ jobs:
           SHINYAPPS_SECRET: ${{ secrets.SHINYAPPS_SECRET }}
         run: |
           Rscript -e '
-            options(repos = c(CRAN = "https://cran.rstudio.com"));
-            library(rsconnect);
+            options(repos = c(CRAN = "https://cran.rstudio.com"))
+            library(rsconnect)
             rsconnect::setAccountInfo(name = "raquellima",
                                       token = Sys.getenv("SHINYAPPS_TOKEN"),
-                                      secret = Sys.getenv("SHINYAPPS_SECRET"));
-            rsconnect::deployApp(appDir = "Tool", applicationId = 14616604, appPrimaryDoc = "UI_EM3_tool.R", forceUpdate = TRUE)
+                                      secret = Sys.getenv("SHINYAPPS_SECRET"))
+            rsconnect::deployApp(appDir = "Tool",
+                                 applicationId = 14616604,
+                                 appPrimaryDoc = "UI_EM3_tool.R",
+                                 forceUpdate = TRUE)
           '
