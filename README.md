@@ -16,17 +16,25 @@ The application (“UI_EM3_tool.R”) and the files needed to run it ("Example D
 
 Random data files that can be used as example in the application are located on the "Example_Random_Data" folder. These are not actual data collected by the original study, but randomly generated data. The download and use of these files are optional and should be used as example only. If downloaded, they don't need to be located in the same folder as the application (“UI_EM3_tool.R”) in your computer, as they need to be manually input into the tool according to the application's instructions.
 
-## DOWNLOAD
+## ONLINE USE
+
+You can use the application online [here(https://raquellima.shinyapps.io/UI-EM3/)].
+
+## OFFLINE USE
+
+If you want to run the application locally (offline), please follow the instructions below:
+
+### DOWNLOAD
 
 To download this repository, click on the green button “Code” and select “Download ZIP”.
 
-## REQUIREMENTS
+### REQUIREMENTS
 
 * Before opening the app, please make sure that you have **R and RStudio installed in your computer**. Here is a [tutorial](https://learnr-examples.shinyapps.io/ex-setup-r/) on how to [install R](https://cran.r-project.org/) and [RStudio](https://rstudio.com/products/rstudio/download/);
 
 * Besides, please make sure that the **files “UI_EM3_tool.R”, "Example Decision-makers.xlsx", "Example Employees.xlsx", "Example School Students.xlsx" and "Example University Students.xlsx" are in the same folder** in your computer.
 
-## LAUNCHING THE APP
+### LAUNCHING THE APP
 
 * Open the “UI_EM3_tool.R” file in your RStudio editor;
 * RStudio will recognize the script and provide a "Run App" button (at the top of the editor);
