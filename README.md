@@ -18,7 +18,7 @@ Random data files that can be used as example in the application are located on 
 
 ## ONLINE USE
 
-You can use the application online [here(https://raquellima.shinyapps.io/UI-EM3/)].
+You can use the application online [here](https://raquellima.shinyapps.io/UI-EM3/).
 
 ## OFFLINE USE
 
