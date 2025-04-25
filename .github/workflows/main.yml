@@ -15,9 +15,9 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[automated]') && !contains(github.event.head_commit.message, '[no-deploy]')"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4.0.0
       - name: deploy
-        uses: BDSI-Utwente/shinyapps-deploy-github-action@v1
+        uses: DeeNA95/shinyapps-deploy-github-action@v1.12.1
         with:
           # account and application name (https://<accountName>.shinyapps.io/<appName>)
           appName: test-ui-em3
@@ -29,3 +29,6 @@ jobs:
 
           # optional inputs
           appDir: Tool
+          
+          #updates the shiny app
+          forceUpdate: true
