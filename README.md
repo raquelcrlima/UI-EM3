@@ -2,13 +2,13 @@
 
 ## LICENSE
 
-**Developed By:** Raquel de Castro Rodrigues Lima (PIs Eoghan Clifford, Marcus Martin Keane), School of Engineering, University of Galway.
+**Developed By:** Raquel de Castro Rodrigues Lima (PhD Researcher) with Principal Investigators Prof. Eoghan Clifford & Dr. Marcus Martin Keane, School of Engineering, University of Galway.
 
-This code is **© R.C.R. Lima, E. Clifford, M.M. Keane, 2025**, and it is made available under the GPL license enclosed with the software ("LICENSE" file).
+This code is **© R.C.R. Lima, M.M. Keane, E. Clifford**, (2025) and it is made available under the GPL license enclosed with the software ("LICENSE" file).
 
 If you use this software for an academic publication, provide proper **attribution**, such as shown below:
 
-* **Lima, R.C.R., Clifford, E., Keane, M.M. (2025). UI-EM3 Tool, University of Galway - available at github.com/raquelcrlima/UI-EM3.**
+* **Lima, R.C.R., Keane, M.M., Clifford, E. (2025). UI-EM3 Tool, University of Galway - available at github.com/raquelcrlima/UI-EM3.**
 
 ## APPLICATION
 
