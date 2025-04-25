@@ -34,5 +34,5 @@ jobs:
             rsconnect::setAccountInfo(name = "raquellima",
                                       token = Sys.getenv("SHINYAPPS_TOKEN"),
                                       secret = Sys.getenv("SHINYAPPS_SECRET"));
-            rsconnect::deployApp(appDir = "UI-EM3-main/Tool", appName = "test-ui-em3", forceUpdate = TRUE)
+            rsconnect::deployApp(appDir = "UI-EM3/Tool", appName = "test-ui-em3", forceUpdate = TRUE)
           '
