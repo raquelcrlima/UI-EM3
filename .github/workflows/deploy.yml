@@ -40,6 +40,6 @@ jobs:
                                       secret = Sys.getenv("SHINYAPPS_SECRET"))
             rsconnect::deployApp(appDir = "Tool",
                                  applicationId = 14616604,
-                                 appPrimaryDoc = "UI_EM3_tool.R",
+                                 appPrimaryDoc = "app.R",
                                  forceUpdate = TRUE)
           '
