@@ -78,27 +78,20 @@ valueLookup <- data.frame(
                "Extremely responsible", "Very responsible", "Moderately responsible", "Slightly responsible", "Not at all responsible",
                "Always", "Often", "Sometimes", "Rarely", "Never", NA
                ),
-  Value = c(5, 4, 3, 2, 1, NA, NA,
+  Value = c(5, 4, 3, 2, 1, 0, NA,
             5, 4, 3, 2, 1,
             5, 4, 3, 2, 1, NA
             )
 )
 
 catMeaning <- data.frame(
-  Category = c("A", "B", "C", "D", "E"),
-  Score = c(
-    "Score between 4.2 (inclusive) and 5 (inclusive)",
-    "Score between 3.4 (inclusive) and 4.2",
-    "Score between 2.6 (inclusive) and 3.4",
-    "Score between 1.8 (inclusive) and 2.6",
-    "Score between 1 (inclusive) and 1.8"
-  ),
-  Definition = c(
-    "Exemplary Maturity",
-    "Advanced Maturity",
-    "Intermediate Maturity",
-    "Basic Maturity",
-    "Initial Maturity"
+  Maturity = c("Level 5: Leading", "Level 4: Advancing", "Level 3: Developing", "Level 2: Emerging", "Level 1: None or Initial"),
+  Rating = c(
+    "Rating between 4 and 5 (inclusive)",
+    "Rating between 3 and 4 (inclusive)",
+    "Rating between 2 and 3 (inclusive)",
+    "Rating between 1 and 2 (inclusive)",
+    "Rating between 0 (inclusive) and 1 (inclusive)"
   ),
   Description = c(
     "Best-in-class, to be used as an example",
@@ -126,15 +119,16 @@ master <- data.frame(
   colOld = c("Please indicate your age", "Please indicate your gender", NA, NA, NA, NA, "Myself", "My family", "My organisation", "European Union", "National government (Ireland/Northern Ireland)", "Other governments (global)", "Local authorities", "Non-governmental organisations", "Businesses (companies)", "Scientists", "Adults, 18+ years old", "Teenagers, 12-17 years old", "I believe I know environmental issues well enough", "I believe I have enough skills to live a sustainable life", "I know how to save energy", "I believe small actions (such as turning off lights/appliances) make a difference in combating global environmental issues", "I consider environmental impacts when making choices (such as turning off lights/appliances)", "I am concerned about environmental issues for the protection of the natural environment", "Saving energy is important to me", "I save energy for environmental reasons", "I am motivated to save energy at home", "I am motivated to save energy in my organisation", "I discuss energy saving at home", "I discuss energy saving in my organisation", "I encourage my family to save energy", "I encourage my colleagues/fellow students to save energy", "I know how my organisation manages energy", "I know how to save energy in my organisation", "Energy conservation is a high priority activity in my organisation", "I am expected to try and save energy in my organisation", "I stay informed about my organisation's pro-environmental campaigns (such as posters, digital media, courses, activities, guidelines, etc.)", "It is easy to find a way to participate in pro-environmental activities in my organisation", "I actively participate in pro-environmental activities in my organisation", "I would engage more with energy savings in my organisation if I had more opportunity/control", "I often feel a comfortable temperature in my organisation", "I often feel a comfortable temperature at home", "I can provide feedback on the indoor/room temperature in my organisation", "I would be willing to provide feedback on the indoor/room temperature in my organisation", "Turn off the lights when I leave a room that won't be occupied", "Turn off the lights when there is sufficient daylight in a room", "Turn off electrical appliances/equipment when not in use", "Turn off the lights when I leave a room that won't be occupied 2", "Turn off the lights when there is sufficient daylight in a room 2", "Turn off electrical appliances/equipment when not in use 2", "There is a formal energy management system in my organisation", "My organisation follows energy management guidelines/standards (e.g., ISO 50001)", "My organisation follows environmental sustainability guidelines/standards (e.g., ISO 14001)", "My organisation has an internal guideline/plan on energy savings and other environmental ambitions (e.g., carbon emissions)", "Sustainability is part of the core activities/values of my organisation", "The organisation plans and adopts energy conservation measures on a regular basis", "The organisation audits its energy consumption on a regular basis; the energy management system is subject to continuous improvement", "I believe my organisation has enough resources to have a formal energy management system", "I believe my organisation has enough skills to have a formal energy management system", "I believe it makes sense for my organisation to have a formal energy management system", "My organisation has meters/sensors as part of its energy management", "The data from meters/sensors are automatically gathered", "There is a constant follow-up on building energy data that feeds into the energy management system", "Gather historical data", "Inform decision making", "Dissemination of information to users", "My organisation provides sustainability education/training/courses for its users (e.g., staff, students)", "Top managers are aware of the importance of energy conservation and support energy conservation initiatives", "Any user can effectively engage in the energy management of the organisation", "The users' input on sustainability matters and on energy management are an effective part of the decision-making process", "Thermal comfort", "Knowledge/attitudes regarding environmental or sustainability matters", "Sustainable practices in the organisation (e.g., use of lights, appliances, personal devices)", "How often does your organisation carry sustainability campaigns (e.g., turn it off)?", "Sustainability-related metrics and KPIs", "Results/insights from users' feedbacks and surveys", "Results/insights from sustainability campaigns", NA, NA, NA),
   Question = c("Please indicate your age", "Please indicate your gender", NA, NA, NA, NA, "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Based on your opinion, please rank the levels of responsibility the following groups have in helping to combat global environmental issues", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "Please indicate how much you agree or disagree with the following statements", "How often do you perform the following activities AT HOME?", "How often do you perform the following activities AT HOME?", "How often do you perform the following activities AT HOME?", "How often do you perform the following activities IN YOUR ORGANISATION?", "How often do you perform the following activities IN YOUR ORGANISATION?", "How often do you perform the following activities IN YOUR ORGANISATION?", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please indicate whether your organisation have the following purposes for its meters/sensors", "Please indicate whether your organisation have the following purposes for its meters/sensors", "Please indicate whether your organisation have the following purposes for its meters/sensors", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "Please rate the extent to which you agree/disagree with the following statements", "How often does your organisation gather information/feedback from its users regarding the following topics?", "How often does your organisation gather information/feedback from its users regarding the following topics?", "How often does your organisation gather information/feedback from its users regarding the following topics?", "How often does your organisation carry sustainability campaigns (e.g., turn it off)?", "How much of the following data does your organisation disseminate with its users?", "How much of the following data does your organisation disseminate with its users?", "How much of the following data does your organisation disseminate with its users?", NA, NA, NA),
   Item = c(NA, NA, NA, NA, NA, NA, "Myself", "My family", "My organisation", "European Union", "National government (Ireland/Northern Ireland)", "Other governments (global)", "Local authorities", "Non-governmental organisations", "Businesses (companies)", "Scientists", "Adults, 18+ years old", "Teenagers, 12-17 years old", "I believe I know environmental issues well enough", "I believe I have enough skills to live a sustainable life", "I know how to save energy", "I believe small actions (such as turning off lights/appliances) make a difference in combating global environmental issues", "I consider environmental impacts when making choices (such as turning off lights/appliances)", "I am concerned about environmental issues for the protection of the natural environment", "Saving energy is important to me", "I save energy for environmental reasons", "I am motivated to save energy at home", "I am motivated to save energy in my organisation", "I discuss energy saving at home", "I discuss energy saving in my organisation", "I encourage my family to save energy", "I encourage my colleagues/fellow students to save energy", "I know how my organisation manages energy", "I know how to save energy in my organisation", "Energy conservation is a high priority activity in my organisation", "I am expected to try and save energy in my organisation", "I stay informed about my organisation's pro-environmental campaigns (such as posters, digital media, courses, activities, guidelines, etc.)", "It is easy to find a way to participate in pro-environmental activities in my organisation", "I actively participate in pro-environmental activities in my organisation", "I would engage more with energy savings in my organisation if I had more opportunity/control", "I often feel a comfortable temperature in my organisation", "I often feel a comfortable temperature at home", "I can provide feedback on the indoor/room temperature in my organisation", "I would be willing to provide feedback on the indoor/room temperature in my organisation", "Turn off the lights when I leave a room that won't be occupied", "Turn off the lights when there is sufficient daylight in a room", "Turn off electrical appliances/equipment when not in use", "Turn off the lights when I leave a room that won't be occupied", "Turn off the lights when there is sufficient daylight in a room", "Turn off electrical appliances/equipment when not in use", "There is a formal energy management system in my organisation", "My organisation follows energy management guidelines/standards (e.g., ISO 50001)", "My organisation follows environmental sustainability guidelines/standards (e.g., ISO 14001)", "My organisation has an internal guideline/plan on energy savings and other environmental ambitions (e.g., carbon emissions)", "Sustainability is part of the core activities/values of my organisation", "The organisation plans and adopts energy conservation measures on a regular basis", "The organisation audits its energy consumption on a regular basis; the energy management system is subject to continuous improvement", "I believe my organisation has enough resources to have a formal energy management system", "I believe my organisation has enough skills to have a formal energy management system", "I believe it makes sense for my organisation to have a formal energy management system", "My organisation has meters/sensors as part of its energy management", "The data from meters/sensors are automatically gathered", "There is a constant follow-up on building energy data that feeds into the energy management system", "Gather historical data", "Inform decision making", "Dissemination of information to users", "My organisation provides sustainability education/training/courses for its users (e.g., staff, students)", "Top managers are aware of the importance of energy conservation and support energy conservation initiatives", "Any user can effectively engage in the energy management of the organisation", "The users' input on sustainability matters and on energy management are an effective part of the decision-making process", "Thermal comfort", "Knowledge/attitudes regarding environmental or sustainability matters", "Sustainable practices in the organisation (e.g., use of lights, appliances, personal devices)", NA, "Sustainability-related metrics and KPIs", "Results/insights from users' feedbacks and surveys", "Results/insights from sustainability campaigns", NA, NA, NA),
-  Ind = c("Please indicate your age", "Please indicate your gender", "I am taking or have taken part on environmental/sustainability education initiatives in my organisation (training, modules, courses, etc.)", "I am taking or have taken part on energy/energy management education initiatives in my organisation (training, modules, courses, etc.)", "My organisation contributed to my knowledge about global environmental issues (such as climate change, water pollution, biodiversity crises, etc.) and how to combat them", "My organisation contributed to my knowledge about energy and how to save it", "I am responsible for helping to combat global environmental issues", "My family is responsible for helping to combat global environmental issues", "My organisation is responsible for helping to combat global environmental issues", "The European Union is responsible for helping to combat global environmental issues", "The national government (Ireland/Northern Ireland) is responsible for helping to combat global environmental issues", "Other governments (global) are responsible for helping to combat global environmental issues", "Local authorities are responsible for helping to combat global environmental issues", "Non-governmental organisations are responsible for helping to combat global environmental issues", "Businesses (companies) are responsible for helping to combat global environmental issues", "Scientists are responsible for helping to combat global environmental issues", "Adults (18+ years old) are responsible for helping to combat global environmental issues", "Teenagers (12-17 years old) are responsible for helping to combat global environmental issues", "I know environmental issues well enough", "I have enough skills to live a sustainable life", "I know how to save energy", "Small actions (such as turning off lights/appliances) make a difference in combating global environmental issues", "I consider environmental impacts when making choices (such as turning off lights/appliances)", "I am concerned about environmental issues for the protection of the natural environment", "Saving energy is important to me", "I save energy for environmental reasons", "I am motivated to save energy at home", "I am motivated to save energy in my organisation", "I discuss energy saving at home", "I discuss energy saving in my organisation", "I encourage my family to save energy", "I encourage my colleagues/fellow students to save energy", "I know how my organisation manages energy", "I know how to save energy in my organisation", "Energy conservation is a high priority activity in my organisation", "I am expected to try and save energy in my organisation", "I stay informed about my organisation's pro-environmental campaigns (such as posters, digital media, courses, activities, guidelines, etc.)", "It is easy to find a way to participate in pro-environmental activities in my organisation", "I actively participate in pro-environmental activities in my organisation", "I would engage more with energy savings in my organisation if I had more opportunity/control", "I often feel a comfortable temperature in my organisation", "I often feel a comfortable temperature at home", "I can provide feedback on the indoor/room temperature in my organisation", "I would be willing to provide feedback on the indoor/room temperature in my organisation", "At home, I turn off the lights when I leave a room that won't be occupied", "At home, I turn off the lights when there is sufficient daylight in a room", "At home, I turn off electrical appliances/equipment when not in use", "In my organisation, I turn off the lights when I leave a room that won't be occupied", "In my organisation, I turn off the lights when there is sufficient daylight in a room", "In my organisation, I turn off electrical appliances/equipment when not in use", "There is a formal energy management system in my organisation", "My organisation follows energy management guidelines/standards (e.g., ISO 50001)", "My organisation follows environmental sustainability guidelines/standards (e.g., ISO 14001)", "My organisation has an internal guideline/plan on energy savings and other environmental ambitions (e.g., carbon emissions)", "Sustainability is part of the core activities/values of my organisation", "The organisation plans and adopts energy conservation measures on a regular basis", "The organisation audits its energy consumption on a regular basis; the energy management system is subject to continuous improvement", "My organisation has enough resources to have a formal energy management system", "My organisation has enough skills to have a formal energy management system", "It makes sense for my organisation to have a formal energy management system", "My organisation has meters/sensors as part of its energy management", "The data from meters/sensors are automatically gathered", "There is a constant follow-up on building energy data that feeds into the energy management system", "My organisation uses its sensors/meters to gather historical data", "My organisation uses its sensors/meters to inform decision making", "My organisation uses its sensors/meters to disseminate information to the users", "My organisation provides sustainability education/training/courses for its users", "Top managers are aware of the importance of energy conservation and support energy conservation initiatives", "Any user can effectively engage in the energy management of the organisation", "The users' input on sustainability matters and on energy management are an effective part of the decision-making process", "My organisation often (yearly) gathers information/feedback from its users regarding thermal comfort", "My organisation often (yearly) gathers information/feedback from its users regarding environmental/sustainability knowledge/attitudes", "My organisation often (yearly) gathers information/feedback from its users regarding sustainable practices in the organisation (e.g., use of lights, appliances, personal devices)", "My organisation often (yearly) carries sustainability campaigns (e.g., turn it off)", "My organisation disseminates to its users sustainability-related metrics and KPIs", "My organisation disseminates to its users results/insights from users' feedback and surveys", "My organisation disseminates to its users results/insights from sustainability campaigns", "In my organisation there is a direct feedback channel from users to energy management decision-makers (e.g., mobile app, feedback box/form, person to person, e-mail, phone, text message)", "In my organisation there are pro-environmental communication strategies (e.g., posters, digital screens/displays, prompts, newsletters)", "My organisation provides incentives to its users to engage in sustainability campaigns (e.g., financial incentive, promotion, bonus, competition/award, certificate)"),
+  colNew = c("Please indicate your age", "Please indicate your gender", "I am taking or have taken part on environmental/sustainability education initiatives in my organisation (training, modules, courses, etc.)", "I am taking or have taken part on energy/energy management education initiatives in my organisation (training, modules, courses, etc.)", "My organisation contributed to my knowledge about global environmental issues (such as climate change, water pollution, biodiversity crises, etc.) and how to combat them", "My organisation contributed to my knowledge about energy and how to save it", "I am responsible for helping to combat global environmental issues", "My family is responsible for helping to combat global environmental issues", "My organisation is responsible for helping to combat global environmental issues", "The European Union is responsible for helping to combat global environmental issues", "The national government (Ireland/Northern Ireland) is responsible for helping to combat global environmental issues", "Other governments (global) are responsible for helping to combat global environmental issues", "Local authorities are responsible for helping to combat global environmental issues", "Non-governmental organisations are responsible for helping to combat global environmental issues", "Businesses (companies) are responsible for helping to combat global environmental issues", "Scientists are responsible for helping to combat global environmental issues", "Adults (18+ years old) are responsible for helping to combat global environmental issues", "Teenagers (12-17 years old) are responsible for helping to combat global environmental issues", "I know environmental issues well enough", "I have enough skills to live a sustainable life", "I know how to save energy", "Small actions (such as turning off lights/appliances) make a difference in combating global environmental issues", "I consider environmental impacts when making choices (such as turning off lights/appliances)", "I am concerned about environmental issues for the protection of the natural environment", "Saving energy is important to me", "I save energy for environmental reasons", "I am motivated to save energy at home", "I am motivated to save energy in my organisation", "I discuss energy saving at home", "I discuss energy saving in my organisation", "I encourage my family to save energy", "I encourage my colleagues/fellow students to save energy", "I know how my organisation manages energy", "I know how to save energy in my organisation", "Energy conservation is a high priority activity in my organisation", "I am expected to try and save energy in my organisation", "I stay informed about my organisation's pro-environmental campaigns (such as posters, digital media, courses, activities, guidelines, etc.)", "It is easy to find a way to participate in pro-environmental activities in my organisation", "I actively participate in pro-environmental activities in my organisation", "I would engage more with energy savings in my organisation if I had more opportunity/control", "I often feel a comfortable temperature in my organisation", "I often feel a comfortable temperature at home", "I can provide feedback on the indoor/room temperature in my organisation", "I would be willing to provide feedback on the indoor/room temperature in my organisation", "At home, I turn off the lights when I leave a room that won't be occupied", "At home, I turn off the lights when there is sufficient daylight in a room", "At home, I turn off electrical appliances/equipment when not in use", "In my organisation, I turn off the lights when I leave a room that won't be occupied", "In my organisation, I turn off the lights when there is sufficient daylight in a room", "In my organisation, I turn off electrical appliances/equipment when not in use", "There is a formal energy management system in my organisation", "My organisation follows energy management guidelines/standards (e.g., ISO 50001)", "My organisation follows environmental sustainability guidelines/standards (e.g., ISO 14001)", "My organisation has an internal guideline/plan on energy savings and other environmental ambitions (e.g., carbon emissions)", "Sustainability is part of the core activities/values of my organisation", "The organisation plans and adopts energy conservation measures on a regular basis", "The organisation audits its energy consumption on a regular basis; the energy management system is subject to continuous improvement", "My organisation has enough resources to have a formal energy management system", "My organisation has enough skills to have a formal energy management system", "It makes sense for my organisation to have a formal energy management system", "My organisation has meters/sensors as part of its energy management", "The data from meters/sensors are automatically gathered", "There is a constant follow-up on building energy data that feeds into the energy management system", "My organisation uses its sensors/meters to gather historical data", "My organisation uses its sensors/meters to inform decision making", "My organisation uses its sensors/meters to disseminate information to the users", "My organisation provides sustainability education/training/courses for its users", "Top managers are aware of the importance of energy conservation and support energy conservation initiatives", "Any user can effectively engage in the energy management of the organisation", "The users' input on sustainability matters and on energy management are an effective part of the decision-making process", "My organisation often (yearly) gathers information/feedback from its users regarding thermal comfort", "My organisation often (yearly) gathers information/feedback from its users regarding environmental/sustainability knowledge/attitudes", "My organisation often (yearly) gathers information/feedback from its users regarding sustainable practices in the organisation (e.g., use of lights, appliances, personal devices)", "My organisation often (yearly) carries sustainability campaigns (e.g., turn it off)", "My organisation disseminates to its users sustainability-related metrics and KPIs", "My organisation disseminates to its users results/insights from users' feedback and surveys", "My organisation disseminates to its users results/insights from sustainability campaigns", "In my organisation there is a direct feedback channel from users to energy management decision-makers (e.g., mobile app, feedback box/form, person to person, e-mail, phone, text message)", "In my organisation there are pro-environmental communication strategies (e.g., posters, digital screens/displays, prompts, newsletters)", "My organisation provides incentives to its users to engage in sustainability campaigns (e.g., financial incentive, promotion, bonus, competition/award, certificate)"),
+  Ind = c("Please indicate your age", "Please indicate your gender", "6.1.3. I am taking or have taken part on environmental/sustainability education initiatives in my organisation (training, modules, courses, etc.)", "6.2.1. I am taking or have taken part on energy/energy management education initiatives in my organisation (training, modules, courses, etc.)", "6.1.4. My organisation contributed to my knowledge about global environmental issues (such as climate change, water pollution, biodiversity crises, etc.) and how to combat them", "6.2.2. My organisation contributed to my knowledge about energy and how to save it", "2.1.3. I am responsible for helping to combat global environmental issues", "2.3.1. My family is responsible for helping to combat global environmental issues", "2.3.2. My organisation is responsible for helping to combat global environmental issues", "2.3.3. The European Union is responsible for helping to combat global environmental issues", "2.3.4. The national government (Ireland/Northern Ireland) is responsible for helping to combat global environmental issues", "2.3.5. Other governments (global) are responsible for helping to combat global environmental issues", "2.3.6. Local authorities are responsible for helping to combat global environmental issues", "2.3.7. Non-governmental organisations are responsible for helping to combat global environmental issues", "2.3.8. Businesses (companies) are responsible for helping to combat global environmental issues", "2.3.9. Scientists are responsible for helping to combat global environmental issues", "2.3.10. Adults (18+ years old) are responsible for helping to combat global environmental issues", "2.3.11. Teenagers (12-17 years old) are responsible for helping to combat global environmental issues", "1.1.1. I know environmental issues well enough", "2.1.2. I have enough skills to live a sustainable life", "1.2.1. I know how to save energy", "2.1.1. Small actions (such as turning off lights/appliances) make a difference in combating global environmental issues", "2.2.1. I consider environmental impacts when making choices (such as turning off lights/appliances)", "2.2.2. I am concerned about environmental issues for the protection of the natural environment", "3.1.1. Saving energy is important to me", "2.2.3. I save energy for environmental reasons", "I am motivated to save energy at home", "3.1.2. I am motivated to save energy in my organisation", "I discuss energy saving at home", "3.2.6. I discuss energy saving in my organisation", "I encourage my family to save energy", "3.2.7. I encourage my colleagues/fellow students to save energy", "1.2.2. I know how my organisation manages energy", "1.2.3. I know how to save energy in my organisation", "5.1.3. Energy conservation is a high priority activity in my organisation", "5.1.4. I am expected to try and save energy in my organisation", "3.2.3. I stay informed about my organisation's pro-environmental campaigns (such as posters, digital media, courses, activities, guidelines, etc.)", "3.2.4. It is easy to find a way to participate in pro-environmental activities in my organisation", "3.2.5. I actively participate in pro-environmental activities in my organisation", "3.2.1. I would engage more with energy savings in my organisation if I had more opportunity/control", "4.1.1. I often feel a comfortable temperature in my organisation", "I often feel a comfortable temperature at home", "7.1.3. I can provide feedback on the indoor/room temperature in my organisation", "7.1.1. I would be willing to provide feedback on the indoor/room temperature in my organisation", "At home, I turn off the lights when I leave a room that won't be occupied", "At home, I turn off the lights when there is sufficient daylight in a room", "At home, I turn off electrical appliances/equipment when not in use", "3.3.1. In my organisation, I turn off the lights when I leave a room that won't be occupied", "3.3.2. In my organisation, I turn off the lights when there is sufficient daylight in a room", "3.3.3. In my organisation, I turn off electrical appliances/equipment when not in use", "5.3.1. There is a formal energy management system in my organisation", "5.3.2. My organisation follows energy management guidelines/standards (e.g., ISO 50001)", "5.3.3. My organisation follows environmental sustainability guidelines/standards (e.g., ISO 14001)", "5.3.4. My organisation has an internal guideline/plan on energy savings and other environmental ambitions (e.g., carbon emissions)", "5.1.1. Sustainability is part of the core activities/values of my organisation", "5.3.5. The organisation plans and adopts energy conservation measures on a regular basis", "5.3.6. The organisation audits its energy consumption on a regular basis; the energy management system is subject to continuous improvement", "5.2.1. My organisation has enough resources to have a formal energy management system", "5.2.2. My organisation has enough skills to have a formal energy management system", "5.2.3. It makes sense for my organisation to have a formal energy management system", "5.4.1. My organisation has meters/sensors as part of its energy management", "5.4.2. The data from meters/sensors are automatically gathered", "5.4.3. There is a constant follow-up on building energy data that feeds into the energy management system", "5.4.4. My organisation uses its sensors/meters to gather historical data", "5.4.5. My organisation uses its sensors/meters to inform decision making", "7.2.4. My organisation uses its sensors/meters to disseminate information to the users", "6.1.1. My organisation provides sustainability education/training/courses for its users", "5.1.2. Top managers are aware of the importance of energy conservation and support energy conservation initiatives", "3.2.2. Any user can effectively engage in the energy management of the organisation", "7.1.2. The users' input on sustainability matters and on energy management are an effective part of the decision-making process", "7.1.4. My organisation often (yearly) gathers information/feedback from its users regarding thermal comfort", "7.1.5. My organisation often (yearly) gathers information/feedback from its users regarding environmental/sustainability knowledge/attitudes", "7.1.6. My organisation often (yearly) gathers information/feedback from its users regarding sustainable practices in the organisation (e.g., use of lights, appliances, personal devices)", "6.1.2. My organisation often (yearly) carries sustainability campaigns (e.g., turn it off)", "7.2.1. My organisation disseminates to its users sustainability-related metrics and KPIs", "7.2.2. My organisation disseminates to its users results/insights from users' feedback and surveys", "7.2.3. My organisation disseminates to its users results/insights from sustainability campaigns", "7.1.7. In my organisation there is a direct feedback channel from users to energy management decision-makers (e.g., mobile app, feedback box/form, person to person, e-mail, phone, text message)", "7.2.5. In my organisation there are pro-environmental communication strategies (e.g., posters, digital screens/displays, prompts, newsletters)", "3.2.8. My organisation provides incentives to its users to engage in sustainability campaigns (e.g., financial incentive, promotion, bonus, competition/award, certificate)"),
   onFilter = c(1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2),
   audFilter = c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2),
   rValue = c(NA, NA, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2),
   Model = c(NA, NA, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, NA, 1, NA, 1, NA, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NA, 1, 1, NA, NA, NA, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2),
   TopicCode = c(NA, NA, 6, 6, 6, 6, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2, 3, 2, NA, 3, NA, 3, NA, 3, 1, 1, 5, 5, 3, 3, 3, 3, 4, NA, 7, 7, NA, NA, NA, 3, 3, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7, 6, 5, 3, 7, 7, 7, 7, 6, 7, 7, 7, 7, 7, 3),
-  Topic = c(NA, NA, "Education", "Education", "Education", "Education", "Beliefs", "Beliefs", "Beliefs", "Beliefs", "Beliefs", "Beliefs", "Beliefs", "Beliefs", "Beliefs", "Beliefs", "Beliefs", "Beliefs", "Knowledge and Awareness", "Beliefs", "Knowledge and Awareness", "Beliefs", "Beliefs", "Beliefs", "Behaviours", "Beliefs", NA, "Behaviours", NA, "Behaviours", NA, "Behaviours", "Knowledge and Awareness", "Knowledge and Awareness", "Energy Management", "Energy Management", "Behaviours", "Behaviours", "Behaviours", "Behaviours", "Comfort", NA, "Feedback and Communication", "Feedback and Communication", NA, NA, NA, "Behaviours", "Behaviours", "Behaviours", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Energy Management", "Feedback and Communication", "Education", "Energy Management", "Behaviours", "Feedback and Communication", "Feedback and Communication", "Feedback and Communication", "Feedback and Communication", "Education", "Feedback and Communication", "Feedback and Communication", "Feedback and Communication", "Feedback and Communication", "Feedback and Communication", "Behaviours"),
+  Topic = c(NA, NA, "6. Education", "6. Education", "6. Education", "6. Education", "2. Beliefs", "2. Beliefs", "2. Beliefs", "2. Beliefs", "2. Beliefs", "2. Beliefs", "2. Beliefs", "2. Beliefs", "2. Beliefs", "2. Beliefs", "2. Beliefs", "2. Beliefs", "1. Knowledge and Awareness", "2. Beliefs", "1. Knowledge and Awareness", "2. Beliefs", "2. Beliefs", "2. Beliefs", "3. Behaviours", "2. Beliefs", NA, "3. Behaviours", NA, "3. Behaviours", NA, "3. Behaviours", "1. Knowledge and Awareness", "1. Knowledge and Awareness", "5. Energy Management", "5. Energy Management", "3. Behaviours", "3. Behaviours", "3. Behaviours", "3. Behaviours", "4. Comfort", NA, "7. Feedback and Communication", "7. Feedback and Communication", NA, NA, NA, "3. Behaviours", "3. Behaviours", "3. Behaviours", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "5. Energy Management", "7. Feedback and Communication", "6. Education", "5. Energy Management", "3. Behaviours", "7. Feedback and Communication", "7. Feedback and Communication", "7. Feedback and Communication", "7. Feedback and Communication", "6. Education", "7. Feedback and Communication", "7. Feedback and Communication", "7. Feedback and Communication", "7. Feedback and Communication", "7. Feedback and Communication", "3. Behaviours"),
   CritCode = c(NA, NA, 61, 62, 61, 62, 21, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 11, 21, 12, 21, 22, 22, 31, 22, NA, 31, NA, 32, NA, 32, 12, 12, 51, 51, 32, 32, 32, 32, 41, NA, 71, 71, NA, NA, NA, 33, 33, 33, 53, 53, 53, 53, 51, 53, 53, 52, 52, 52, 54, 54, 54, 54, 54, 72, 61, 51, 32, 71, 71, 71, 71, 61, 72, 72, 72, 71, 72, 32),
-  Crit = c(NA, NA, "Sustainability Education", "Energy Management Education", "Sustainability Education", "Energy Management Education", "Self-Efficacy", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Perceived Broad Responsibility", "Environmental Awareness", "Self-Efficacy", "Energy Management Knowledge", "Self-Efficacy", "Environmental Concern", "Environmental Concern", "Motivation", "Environmental Concern", NA, "Motivation", NA, "Engagement", NA, "Engagement", "Energy Management Knowledge", "Energy Management Knowledge", "Values", "Values", "Engagement", "Engagement", "Engagement", "Engagement", "Thermal Comfort", NA, "Feedback", "Feedback", NA, NA, NA, "Practices", "Practices", "Practices", "Implementation", "Implementation", "Implementation", "Implementation", "Values", "Implementation", "Implementation", "Capabilities", "Capabilities", "Capabilities", "Monitoring ", "Monitoring ", "Monitoring ", "Monitoring ", "Monitoring ", "Communication", "Sustainability Education", "Values", "Engagement", "Feedback", "Feedback", "Feedback", "Feedback", "Sustainability Education", "Communication", "Communication", "Communication", "Feedback", "Communication", "Engagement"),
+  Crit = c(NA, NA, "6.1. Sustainability Education", "6.2. Energy Management Education", "6.1. Sustainability Education", "6.2. Energy Management Education", "2.1. Self-Efficacy", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "2.3. Perceived Broad Responsibility", "1.1. Environmental Awareness", "2.1. Self-Efficacy", "1.2. Energy Management Knowledge", "2.1. Self-Efficacy", "2.2. Environmental Concern", "2.2. Environmental Concern", "3.1. Motivation", "2.2. Environmental Concern", NA, "3.1. Motivation", NA, "3.2. Engagement", NA, "3.2. Engagement", "1.2. Energy Management Knowledge", "1.2. Energy Management Knowledge", "5.1. Values", "5.1. Values", "3.2. Engagement", "3.2. Engagement", "3.2. Engagement", "3.2. Engagement", "4.1. Thermal Comfort", NA, "7.1. Feedback", "7.1. Feedback", NA, NA, NA, "3.3. Practices", "3.3. Practices", "3.3. Practices", "5.3. Implementation", "5.3. Implementation", "5.3. Implementation", "5.3. Implementation", "5.1. Values", "5.3. Implementation", "5.3. Implementation", "5.2. Capabilities", "5.2. Capabilities", "5.2. Capabilities", "5.4. Monitoring ", "5.4. Monitoring ", "5.4. Monitoring ", "5.4. Monitoring ", "5.4. Monitoring ", "7.2. Communication", "6.1. Sustainability Education", "5.1. Values", "3.2. Engagement", "7.1. Feedback", "7.1. Feedback", "7.1. Feedback", "7.1. Feedback", "6.1. Sustainability Education", "7.2. Communication", "7.2. Communication", "7.2. Communication", "7.1. Feedback", "7.2. Communication", "3.2. Engagement"),
   IndCode = c(NA, NA, 6103, 6201, 6104, 6202, 2103, 2301, 2302, 2303, 2304, 2305, 2306, 2307, 2308, 2309, 2310, 2311, 1101, 2102, 1201, 2101, 2201, 2202, 3101, 2203, NA, 3102, NA, 3206, NA, 3207, 1202, 1203, 5103, 5104, 3203, 3204, 3205, 3201, 4101, NA, 7103, 7101, NA, NA, NA, 3301, 3302, 3303, 5301, 5302, 5303, 5304, 5101, 5305, 5306, 5201, 5202, 5203, 5401, 5402, 5403, 5404, 5405, 7204, 6101, 5102, 3202, 7102, 7104, 7105, 7106, 6102, 7201, 7202, 7203, 7107, 7205, 3208),
   tAna = c(NA, NA, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA),
   gAna = c("Age", "Gender", 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA),
@@ -143,12 +137,12 @@ master <- data.frame(
 )
 
 modelMeaning <- master %>% select(Topic, Crit, Ind, IndCode) %>% filter(!is.na(IndCode)) %>% arrange(IndCode) %>% select(-IndCode)
-colnames(modelMeaning) <- c("Topics", "Criteria", "Indicators")
+colnames(modelMeaning) <- c("Dimensions", "Areas", "Indicators")
 
 dmOld <- master %>% filter(onFilter == 1 & audFilter == 2) %>% select(Code, colOld)
-dmNew <- master %>% filter(audFilter == 2) %>% select(Code, Ind)
+dmNew <- master %>% filter(audFilter == 2) %>% select(Code, colNew)
 userOld <- master %>% filter(onFilter == 1 & audFilter == 1) %>% select(Code, colOld)
-userNew <- master %>% filter(audFilter == 1) %>% select(Code, Ind)
+userNew <- master %>% filter(audFilter == 1) %>% select(Code, colNew)
 
 dfColNames <- c("Code", "Question")
 
@@ -209,7 +203,7 @@ ui <- dashboardPage(
               h3("Home"),
               fluidPage(
                 h4("About"),
-                p("This app was derived from a PhD research at the University of Galway. It helps decision-makers in companies, universities, and schools identify key focus areas for improving energy management by integrating user perspectives."),
+                p("This app was derived from a PhD research at the University of Galway. It helps decision-makers in companies, universities, and schools identify key focus topics for improving energy management by integrating user perspectives."),
                 h4("Terms used"),
                 tags$ul(
                   tags$li(tags$b("UI-EM3: "), "User-Integrated Energy Management Maturity Model."),
@@ -225,6 +219,7 @@ ui <- dashboardPage(
                   tags$li(tags$b("Upload previous results (optional): "), "If you have previous results from these surveys, you can upload them as well to track changes over time."),
                   tags$li(tags$b("Start and upload files: "), "Click the “Start” button at the bottom of this page to go to the “Input Files” tab. There, select the relevant options and upload all required files. Once the uploads are complete, click “Continue” to view the results.")
                 ),
+                p(HTML("<b>Note:</b> For privacy-related reasons, all uploaded data (Excel files) are just temporarily stored in the survey. As soon as you close this application or the session times out, all the uploaded data is deleted.")),
                 h4("Survey templates"),
                 p("Please use the survey templates below. Do not modify, add, or remove any parts of the templates when circulating them."),
                 tags$ul(
@@ -242,29 +237,29 @@ ui <- dashboardPage(
                   tags$li(downloadLink("downloadStuSch", "School students"))
                 ),
                 h4("UI-EM3 overview"),
-                p("The UI-EM3 is a model that assesses how well energy management is implemented and considers users’ perspectives. It uses survey data to measure various aspects of energy management and practices, broken down into indicators, criteria, and topics. The details of these components are provided in the table below."),
+                p("The UI-EM3 is a model that assesses how well energy management is implemented and considers users’ perspectives. It uses survey data to measure various aspects of energy management and practices, broken down into indicators, areas, and dimensions. The details of these components are provided in the table below."),
                 uiOutput("modelDescription"),
                 tags$style(HTML("table, th, td { border: 1px solid black; }")),
+                p(HTML("<b>Note:</b> if you are using survey data collected prior to 2024, some indicators and areas will not be assessed.")),
                 tags$ul(
-                  tags$li(tags$b("Scoring: "), "Survey responses are rated from 1 to 5. Each indicator’s score is the average of its survey responses. Similarly, the scores for criteria and topics are averaged from their components."),
-                  tags$li(tags$b("Maturity Categories: "), "Scores are grouped into categories to help understand the maturity level of energy management, as shown in the table below."),
+                  tags$li(tags$b("Rating: "), "Survey responses are rated from 0 to 5 (zero being having no information about a question). Each indicator’s rating is the average of its survey responses. Ratings of areas and dimensions are calculated by the average of its correspondent indicators."),
+                  tags$li(tags$b("Maturity Levels: "), "Ratings are grouped into maturity levels, as shown in the table below."),
                 ),
                 uiOutput("catDescription"),
                 h4("Interpretation examples"),
-                p("Examples of how the maturity of indicators, criteria and topics can be understood, based on their category, are given below."),
+                p("Examples of how the maturity of indicators, areas and dimensions can be understood, based on their maturity level, are given below."),
                 tags$ul(
-                  tags$li("If the indicator “I turn off the lights when I leave a room” is rated ", tags$b("A"), ", it means this behaviour is consistently practiced and should be used as an example."),
-                  tags$li("If the indicator “I turn off the lights when I leave a room” is rated ", tags$b("E"), ", it means this behaviour is rarely or never practiced, and immediate action is needed."),
-                  tags$li("If the criterium “Environmental Awareness” is rated", tags$b("B"), ",  it means the users have strong awareness but could improve in specific areas."),
-                  tags$li("If the criterium “Environmental Awareness” is rated", tags$b("D"), ", it means awareness is limited, and significant effort is needed to improve."),
-                  tags$li("If the topic “Knowledge and Awareness” is rated", tags$b("C"), ", it means the users have moderate knowledge and awareness but needs to strengthen specific criteria."),
-                  tags$li("If the topic “Knowledge and Awareness” is rated", tags$b("E"), ", it means they lack basic knowledge and awareness, and this area requires urgent attention."),
-                  tags$li("If an item has missing score/category (", tags$b("NA"), "), this item should be further investigated to assess whether there are weakenesses that require immediate action.")
+                  tags$li("If the indicator “3.3.1. In my organisation, I turn off the lights when I leave a room that won't be occupied” is at maturity ", tags$b("level 5"), ", it means this behaviour is consistently practiced and should be used as an example."),
+                  tags$li("If the indicator “3.3.1. In my organisation, I turn off the lights when I leave a room that won't be occupied” is at maturity ", tags$b("level 1"), ", it means this behaviour is rarely or never practiced, and immediate action is needed."),
+                  tags$li("If the area “1.1. Environmental Awareness” is at maturity ", tags$b("level 4"), ",  it means the users have strong awareness but could improve in specific indicators."),
+                  tags$li("If the area “1.1. Environmental Awareness” is at maturity ", tags$b("level 2"), ", it means awareness is limited, and significant effort is needed to improve."),
+                  tags$li("If the dimension “1. Knowledge and Awareness” is at maturity ", tags$b("level 3"), ", it means the users have moderate knowledge and awareness but needs to strengthen specific areas."),
+                  tags$li("If the dimension “1. Knowledge and Awareness” is at maturity ", tags$b("level 1"), ", it means they lack basic knowledge and awareness, and this dimension requires urgent attention.")
                 ),
                 h4("Comparisons"),
                 p("In addition to UI-EM3, the app performs statistical comparisons to provide deeper insights:"),
                 tags$ul(
-                  tags$li(tags$b("Setting: "), "Compare practices at home vs. in the organisation for spill-over analysis."),
+                  tags$li(tags$b("Setting: "), "Compare practices at home vs. in the organisation."),
                   tags$li(tags$b("Audience: "), "Compare students vs. employees (where applicable) to identify similarities and differences in approaches that target these groups."),
                   tags$li(tags$b("Time: "), "Compare previous vs. current results (where applicable) to track changes over time.")
                 ),
@@ -273,11 +268,11 @@ ui <- dashboardPage(
                 h4("Outputs"),
                 p("After uploading all required files and clicking “Continue”, three tabs will appear:"),
                 tags$ul(
-                  tags$li(tags$b("Highlights: "), "Provides a roadmap for improvement, highlighting key focus areas to target."),
+                  tags$li(tags$b("Highlights: "), "Provides a roadmap for improvement, highlighting key focus topics to target."),
                   tags$li(tags$b("Results: "), "Displays an overview of survey results, UI-EM3 outcomes, and comparisons across settings, audience, and time.")
                 ),
                 h4("More information"),
-                p("If you have any questions, please contact Raquel Lima (raquel.lima@universityofgalway.ie) or refer to the associated research."),
+                p("If you have any questions, please contact Raquel Lima (uiem3@raquelcrlima.com) or refer to the associated research."),
                 hr(),
                 actionButton("showMenu", "Start", class = "btn-enabled"),
                 hr()
@@ -358,30 +353,33 @@ ui <- dashboardPage(
               )
       ),
       tabItem(tabName = "highlights",
-              h3("Highlights"),
+              h3("Overall maturity"),
+              fluidRow(
+                box(
+                  uiOutput("overallRatings"), width = 12
+                )
+              ),
+              h3("Topics to target next"),
               fluidRow(
                 tabBox(id = "highlightModel", width = 12,
-                       tabPanel(id = "highlightCrit", title = "Criteria",
+                       tabPanel(id = "highlightTopic", title = "Dimensions",
+                                uiOutput("topicRes")
+                       ),
+                       tabPanel(id = "highlightCrit", title = "Areas",
                                 uiOutput("critRes")
                        ),
                        tabPanel(id = "highlightInd", title = "Indicators",
                                 uiOutput("indRes")
-                       ),
-                       tabPanel(id = "highlightTopic", title = "Topics",
-                                uiOutput("topicRes")
                        )
                 )
               ),
               h3("Next steps"),
               fluidRow(
                 box(
-                  p(HTML("The <b>topics</b> show the key themes evaluated in the model, to have a clearer vision on <b>what is being measured</b>.<br/>
-                  The <b>criteria</b> are the <b>main instrument to inform decision-making</b>, as they evaluate more specific themes under the topics, and are informed by the indicators.<br/>
+                  p(HTML("The <b>dimensions</b> show the key themes evaluated in the model, to have a clearer vision on <b>what is being measured</b>.<br/>
+                  The <b>areas</b> are the <b>main instrument to inform decision-making</b>, as they evaluate more specific themes under the dimensions.<br/>
                   The <b>indicators</b> can be <b>measured through questionnaires</b>.<br/><br/>
-                  To improve energy management by integrating user perspectives, please <b>focus on the areas showed at the top of the CRITERIA table</b> above.<br/><br/>
-                  As lack of data in the questionnaires are not accounted for when calculating the scores, <b>items with no score (NA) are placed at the top of the tables above</b>, 
-                  as they are as important or more important than lower scores and <b>should be targeted first</b>.<br/>
-                  As missing data can interfere with the ratings, please consult the INDICATORS table above to pinpoint specific areas that need improvement.<br/><br/>
+                  To improve energy management by integrating user perspectives, please <b>focus on the themes showed at the top of the AREAS table</b> above.<br/><br/>
                   Also, make sure to select respondents to the decision-making survey that have as many information asked as possible.<br/>
                   You can also consult the comparisons across setting, adience and time to get further insights.<br/>
                   Informed by the results of this tool, <b>it is recommended that the organisations conducts follow-up interviews</b> with both decision-makers and users to validate the responses, 
@@ -454,7 +452,14 @@ server <- function(input, output, session) {
     comparisons = NULL,
     modelRes = NULL,
     modelResLevel = NULL,
-    modelResPrint = NULL
+    modelResPrint = NULL,
+    overallRating = NULL,
+    overallRatingOld = NULL,
+    overallMaturity = NULL,
+    overallMaturityOld = NULL,
+    overallRatingChange = NULL,
+    overallMaturityChange = NULL,
+    overallTable = NULL
   )
   
   resetFileInputs <- function() {
@@ -497,6 +502,11 @@ server <- function(input, output, session) {
     reactiveVals$modelRes <- NULL
     reactiveVals$modelResLevel <- NULL
     reactiveVals$modelResPrint <- NULL
+    reactiveVals$overallRating <- NULL
+    reactiveVals$overallRatingOld <- NULL
+    reactiveVals$overallMaturity <- NULL
+    reactiveVals$overallMaturityOld <- NULL
+    reactiveVals$overallTable <- NULL
   }
   
   readExcelFile <- function(file) {
@@ -560,7 +570,7 @@ server <- function(input, output, session) {
   }
   
   category <- function(x){
-    case_when(x >= 4.2 ~ "A", x >= 3.4 ~ "B", x >= 2.6 ~ "C", x >= 1.8 ~ "D", x >= 1 ~ "E", TRUE ~ NA)
+    case_when(x > 4 ~ "5", x > 3 ~ "4", x > 2 ~ "3", x > 1 ~ "2", x >= 0 ~ "1", TRUE ~ NA)
   }
   
   changeLabel <- function(change){
@@ -617,7 +627,7 @@ server <- function(input, output, session) {
   }
   
   compareCat <- function(cur, pre) {
-    levels <- c("A", "B", "C", "D", "E")
+    levels <- c("5", "4", "3", "2", "1")
     curIndex <- match(cur, levels)
     preIndex <- match(pre, levels)
     if (is.na(curIndex) || is.na(preIndex)) {
@@ -657,16 +667,19 @@ server <- function(input, output, session) {
     req(reactiveVals$critRes)
     req(reactiveVals$indRes)
     req(reactiveVals$topicRes)
-    req(reactiveVals$modelRes)
+    req(reactiveVals$modelResPrint)
+    req(reactiveVals$overallTable)
     wb <- createWorkbook()
-    addWorksheet(wb, "Highlights_Indicators")
-    writeData(wb, "Highlights_Indicators", reactiveVals$indRes)
-    addWorksheet(wb, "Highlights_Criteria")
-    writeData(wb, "Highlights_Criteria", reactiveVals$critRes)
-    addWorksheet(wb, "Highlights_Topics")
-    writeData(wb, "Highlights_Topics", reactiveVals$topicRes)
-    addWorksheet(wb, "Model results")
-    writeData(wb, "Model results", reactiveVals$modelResPrint)
+    addWorksheet(wb, "All")
+    writeData(wb, "All", reactiveVals$modelResPrint)
+    addWorksheet(wb, "Overall")
+    writeData(wb, "Overall", reactiveVals$overallTable)
+    addWorksheet(wb, "Dimensions")
+    writeData(wb, "Dimensions", reactiveVals$topicRes)
+    addWorksheet(wb, "Areas")
+    writeData(wb, "Areas", reactiveVals$critRes)
+    addWorksheet(wb, "Indicators")
+    writeData(wb, "Indicators", reactiveVals$indRes)
     saveWorkbook(wb, file, overwrite = TRUE)
   }
 
@@ -968,7 +981,7 @@ server <- function(input, output, session) {
       overview147 <- NULL
       overviewDataQs <- overviewData %>% filter(!is.na(q))
       nameQ <- "Please indicate how much you agree or disagree with the following statements"
-      colI <- "Ind"
+      colI <- "colNew"
     }
     overviewDataDm <- overviewDataQs %>% filter(Audience == "Decision-makers")
     overviewDataUser <- overviewDataQs %>% filter(Audience != "Decision-makers")
@@ -1046,7 +1059,7 @@ server <- function(input, output, session) {
       if(input$curOld == "Yes"){
         gData <- reactiveVals$dataValue %>% filter(gAna == "1" & Survey == "Current") %>% select(Audience, Question, Item, Value) %>% mutate(Question = paste0(Question, ": ", Item)) %>% select(-Item)
       } else {
-        gData <- reactiveVals$dataValue %>% filter(gAna == "1" | gAna == "2") %>% filter(Survey == "Current") %>% select(Audience, Ind, Value)
+        gData <- reactiveVals$dataValue %>% filter(gAna == "1" | gAna == "2") %>% filter(Survey == "Current") %>% select(Audience, colNew, Value)
         colnames(gData)[2] <- "Question"
       }
       for(question in unique(gData$Question)){
@@ -1080,12 +1093,12 @@ server <- function(input, output, session) {
     reactiveVals$tRes3 <- vector()
     if(input$previous == "Yes"){
       if(reactiveVals$preOld == "Yes"){
-        tData <- reactiveVals$dataValue %>% filter(tAna == 1) %>% select(Survey, Ind, Value)
+        tData <- reactiveVals$dataValue %>% filter(tAna == 1) %>% select(Survey, colNew, Value)
       } else {
-        tData <- reactiveVals$dataValue %>% filter(!is.na(tAna)) %>% select(Survey, Ind, Value)
+        tData <- reactiveVals$dataValue %>% filter(!is.na(tAna)) %>% select(Survey, colNew, Value)
       }
-      for(question in unique(tData$Ind)){
-        tPair <- tData %>% filter(Ind == question)
+      for(question in unique(tData$colNew)){
+        tPair <- tData %>% filter(colNew == question)
         tSig <- significance(wilcoxP(tPair, "Survey"))
         tRes <- paste0(question, " (", tSig, ")")
         tTable <- tPair %>% group_by(Survey) %>% summarise(Score = round(mean(Value, na.rm = TRUE), digits = 2), .groups = 'drop') %>% arrange(desc(Score))
@@ -1121,14 +1134,21 @@ server <- function(input, output, session) {
     }
     indResCur <- modelCalc(curModelData, "Current", "Ind", "Value") %>% rename(IndScore = Score, IndCat = Cat)
     critResCur <- modelCalc(indResCur, "Current", "Crit", "IndScore") %>% rename(CritScore = Score, CritCat = Cat)
-    topicResCur <- modelCalc(critResCur, "Current", "Topic", "CritScore") %>% rename(TopicScore = Score, TopicCat = Cat)
+    topicResCur <- modelCalc(indResCur, "Current", "Topic", "IndScore") %>% rename(TopicScore = Score, TopicCat = Cat)
+    reactiveVals$overallRating <- round(mean(indResCur$IndScore, na.rm = TRUE), digits = 2)
+    reactiveVals$overallMaturity <- category(reactiveVals$overallRating)
     modelResCur <- topicResCur %>%
       left_join(critResCur, by = c("TopicCode", "Topic")) %>%
       left_join(indResCur, by = c("TopicCode", "Topic", "CritCode", "Crit"))
     if(input$previous == "Yes"){
       indResPre <- modelCalc(preModelData, "Previous", "Ind", "Value") %>% rename(IndScorePre = Score, IndCatPre = Cat)
       critResPre <- modelCalc(indResPre, "Previous", "Crit", "IndScorePre") %>% rename(CritScorePre = Score, CritCatPre = Cat)
-      topicResPre <- modelCalc(critResPre, "Previous", "Topic", "CritScorePre") %>% rename(TopicScorePre = Score, TopicCatPre = Cat)
+      topicResPre <- modelCalc(indResPre, "Previous", "Topic", "IndScorePre") %>% rename(TopicScorePre = Score, TopicCatPre = Cat)
+      reactiveVals$overallRatingOld <- round(mean(indResPre$IndScorePre, na.rm = TRUE), digits = 2)
+      reactiveVals$overallMaturityOld <- category(reactiveVals$overallRatingOld)
+      reactiveVals$overallRatingChange <- ifelse(!is.na(reactiveVals$overallRatingOld), ((reactiveVals$overallRating - reactiveVals$overallRatingOld) / reactiveVals$overallRatingOld) * 100, NA)
+      reactiveVals$overallRatingChange <- changeLabel(reactiveVals$overallRatingChange)
+      reactiveVals$overallMaturityChange <- compareCat(reactiveVals$overallMaturity, reactiveVals$overallMaturityOld)
       modelRes <- modelResCur %>%
         left_join(topicResPre, by = c("TopicCode", "Topic")) %>% 
         left_join(critResPre, by = c("TopicCode", "Topic", "CritCode", "Crit")) %>% 
@@ -1150,24 +1170,24 @@ server <- function(input, output, session) {
       modelRes <- modelRes %>% select(-TopicCode, -CritCode, -IndCode)
       reactiveVals$indRes <- modelRes %>% select(Ind, IndScore, IndCat) %>% unique() %>%
         arrange(!is.na(IndScore), IndScore) %>% select(-IndScore)
-      colnames(reactiveVals$indRes) <- c("Indicator", "Current Category")
+      colnames(reactiveVals$indRes) <- c("Indicator", "Current Maturity Level")
       reactiveVals$critRes <- modelRes %>% select(Crit, CritScore, CritCat) %>% unique() %>%
         arrange(!is.na(CritScore), CritScore) %>% select(-CritScore)
-      colnames(reactiveVals$critRes) <- c("Criterium", "Current Category")
+      colnames(reactiveVals$critRes) <- c("Area", "Current Maturity Level")
       reactiveVals$topicRes <- modelRes %>% select(Topic, TopicScore, TopicCat) %>% unique() %>%
         arrange(!is.na(TopicScore), TopicScore) %>% select(-TopicScore)
-      colnames(reactiveVals$topicRes) <- c("Topic", "Current Category")
+      colnames(reactiveVals$topicRes) <- c("Dimension", "Current Maturity Level")
     } else if(input$previous == "No"){
       modelRes <- modelResCur %>% select(-TopicCode, -CritCode, -IndCode)
       reactiveVals$indRes <- modelRes %>% select(Ind, IndScore, IndCat) %>% unique() %>%
         arrange(!is.na(IndScore), IndScore) %>% select(-IndScore)
-      colnames(reactiveVals$indRes) <- c("Indicator", "Category")
+      colnames(reactiveVals$indRes) <- c("Indicator", "Maturity Level")
       reactiveVals$critRes <- modelRes %>% select(Crit, CritScore, CritCat) %>% unique() %>%
         arrange(!is.na(CritScore), CritScore) %>% select(-CritScore)
-      colnames(reactiveVals$critRes) <- c("Criterium", "Category")
+      colnames(reactiveVals$critRes) <- c("Area", "Maturity Level")
       reactiveVals$topicRes <- modelRes %>% select(Topic, TopicScore, TopicCat) %>% unique() %>%
         arrange(!is.na(TopicScore), TopicScore) %>% select(-TopicScore)
-      colnames(reactiveVals$topicRes) <- c("Topic", "Category")
+      colnames(reactiveVals$topicRes) <- c("Dimension", "Maturity Level")
     }
     
     if(input$previous == "Yes") {
@@ -1201,21 +1221,21 @@ server <- function(input, output, session) {
         )
       )
       newDataDfDisplayPre <- newDataDfPre %>% select(-Level)
-      reactiveVals$modelResPrint <- reactiveVals$modelResPrint %>% mutate(Type = case_when(Level == 1 ~ "Topic",
-                                                                                           Level == 2 ~ "Criterium",
+      reactiveVals$modelResPrint <- reactiveVals$modelResPrint %>% mutate(Type = case_when(Level == 1 ~ "Dimension",
+                                                                                           Level == 2 ~ "Area",
                                                                                            Level == 3 ~ "Indicator",
                                                                                            TRUE ~ NA
                                                                                            ), .before = Description
                                                                           ) %>% select(-Level)
       reactiveVals$modelResPrint$CatChange <- mapply(compareCat, reactiveVals$modelResPrint$Category, reactiveVals$modelResPrint$PreCat)
-      colnames(reactiveVals$modelResPrint) <- c("Type", "Description", "Current Score", "Current Category", "Score Change", "PreCat", "Category Change")
+      colnames(reactiveVals$modelResPrint) <- c("Type", "Description", "Current Rating", "Current Maturity", "Rating Change", "PreCat", "Maturity Change")
       reactiveVals$modelResPrint <- reactiveVals$modelResPrint %>% select(-PreCat)
       newDataDfDisplayPre$CatChange <- mapply(compareCat, newDataDfDisplayPre$Category, newDataDfDisplayPre$PreCat)
       colnames(newDataDfDisplayPre) <- c("Description", "Current Score", "Current Category", "Score Change", "PreCat", "Category Change")
       newDataDfDisplayPre <- newDataDfDisplayPre %>% select(-PreCat)
       reactiveVals$modelRes <- newDataDfDisplayPre
       reactiveVals$modelResLevel <- newDataDfPre
-      colnames(reactiveVals$modelRes) <- c("Description", "Current Score", "Current Category", "Score Change", "Category Change")
+      colnames(reactiveVals$modelRes) <- c("Description", "Current Rating", "Current Maturity", "Rating Change", "Maturity Change")
     } else if(input$previous == "No") {
       newData <- list()
       levels <- list()
@@ -1248,16 +1268,16 @@ server <- function(input, output, session) {
       )
       newDataDfDisplay <- newDataDf %>% select(-Level)
       
-      reactiveVals$modelResPrint <- reactiveVals$modelResPrint %>% mutate(Type = case_when(Level == 1 ~ "Topic",
-                                                                                           Level == 2 ~ "Criterium",
+      reactiveVals$modelResPrint <- reactiveVals$modelResPrint %>% mutate(Type = case_when(Level == 1 ~ "Dimension",
+                                                                                           Level == 2 ~ "Area",
                                                                                            Level == 3 ~ "Indicator",
                                                                                            TRUE ~ NA
                                                                                            ), .before = Description
                                                                           ) %>% select(-Level)
-      colnames(reactiveVals$modelResPrint) <- c("Type", "Description", "Score", "Category")
+      colnames(reactiveVals$modelResPrint) <- c("Type", "Description", "Rating", "Maturity")
       reactiveVals$modelRes <- newDataDfDisplay
       reactiveVals$modelResLevel <- newDataDf
-      colnames(reactiveVals$modelRes) <- c("Description", "Score", "Category")
+      colnames(reactiveVals$modelRes) <- c("Description", "Rating", "Maturity")
     }
   })
   
@@ -1373,7 +1393,7 @@ server <- function(input, output, session) {
     req(reactiveVals$comparisons)
     HTML(
       reactiveVals$comparisons[[1]] %>%
-        kable(caption = "Difference in score (home vs. organisation)", col.names = c("Home > Organisation", "Organisation > Home", "Home = Organisation")) %>%
+        kable(caption = "Difference in rating (home vs. organisation)", col.names = c("Home > Organisation", "Organisation > Home", "Home = Organisation")) %>%
         kable_styling() %>%
         row_spec(0, extra_css = "border-bottom: 2px solid black;") %>%
         row_spec(0:nrow(reactiveVals$comparisons[[1]]), extra_css = "padding: 2px 4px;") %>%
@@ -1386,7 +1406,7 @@ server <- function(input, output, session) {
     if(input$curAud == "Both") {
       HTML(
         reactiveVals$comparisons[[2]] %>%
-          kable(caption = "Difference in score (students vs. employees)", col.names = c("Students > Employees", "Employees > Students", "Students = Employees")) %>%
+          kable(caption = "Difference in rating (students vs. employees)", col.names = c("Students > Employees", "Employees > Students", "Students = Employees")) %>%
           kable_styling() %>%
           row_spec(0, extra_css = "border-bottom: 2px solid black;") %>%
           row_spec(0:nrow(reactiveVals$comparisons[[2]]), extra_css = "padding: 2px 4px;") %>%
@@ -1402,7 +1422,7 @@ server <- function(input, output, session) {
     if(input$previous == "Yes") {
       HTML(
         reactiveVals$comparisons[[3]] %>%
-          kable(caption = "Difference in score (current vs. previous)", col.names = c("Current > Previous", "Previous > Current", "Current = Previous")) %>%
+          kable(caption = "Difference in rating (current vs. previous)", col.names = c("Current > Previous", "Previous > Current", "Current = Previous")) %>%
           kable_styling() %>%
           row_spec(0, extra_css = "border-bottom: 2px solid black;") %>%
           row_spec(0:nrow(reactiveVals$comparisons[[3]]), extra_css = "padding: 2px 4px;") %>%
@@ -1416,8 +1436,20 @@ server <- function(input, output, session) {
   output$modelResults <- renderUI({
     req(reactiveVals$modelRes)
     req(reactiveVals$modelResLevel)
+    formatted_data <- reactiveVals$modelRes
+    formatted_data <- formatted_data %>%
+      mutate(
+        across(
+          any_of(c("Rating", "Current Rating")),
+          ~ if (is.numeric(.)) {
+            format(round(as.numeric(.), 2), nsmall = 2)
+          } else {
+            format(round(as.numeric(.), 2), nsmall = 2)
+          }
+        )
+      )
     HTML(
-      kable(reactiveVals$modelRes, "html", escape = FALSE, caption = "Model results (topics in dark grey, criteria in light grey, and indicators in white)") %>%
+      kable(formatted_data, "html", escape = FALSE, caption = "Model results (dimensions in dark grey, areas in light grey, and indicators in white)") %>%
         kable_styling() %>%
         row_spec(which(reactiveVals$modelResLevel$Level == 1), bold = TRUE, background = "#bbbbbb") %>%
         row_spec(which(reactiveVals$modelResLevel$Level == 2), bold = TRUE, background = "#dddddd") %>%
@@ -1432,14 +1464,13 @@ server <- function(input, output, session) {
     req(reactiveVals$critRes)
     HTML(
       reactiveVals$critRes %>%
-        kable(caption = "Criteria arranged from lower scores (top) to higher scores (bottom). Criteria with no scores (NA) are showed on top. 
-              Items on the top of the list are to be targeted first.") %>%
+        kable(caption = "Areas arranged from lower ratings (top) to higher ratings (bottom). Items on the top of the list are to be targeted first.") %>%
         kable_styling() %>%
-        row_spec(which(reactiveVals$critRes[,2] == "A"), background = "#66CA64") %>%
-        row_spec(which(reactiveVals$critRes[,2] == "B"), background = "#99D970") %>%
-        row_spec(which(reactiveVals$critRes[,2] == "C"), background = "#FFD015") %>%
-        row_spec(which(reactiveVals$critRes[,2] == "D"), background = "#FE8643") %>%
-        row_spec(which(reactiveVals$critRes[,2] == "E"), background = "#FE5660") %>%
+        row_spec(which(reactiveVals$critRes[,2] == "5"), background = "#B5E7A2") %>%
+        row_spec(which(reactiveVals$critRes[,2] == "4"), background = "#C6EFCE") %>%
+        row_spec(which(reactiveVals$critRes[,2] == "3"), background = "#FFEB9C") %>%
+        row_spec(which(reactiveVals$critRes[,2] == "2"), background = "#FFCC99") %>%
+        row_spec(which(reactiveVals$critRes[,2] == "1"), background = "#FFC7CE") %>%
         row_spec(0, extra_css = "border-bottom: 2px solid black;") %>%
         row_spec(0:nrow(reactiveVals$critRes), extra_css = "padding: 2px 4px;")
     )
@@ -1449,14 +1480,13 @@ server <- function(input, output, session) {
     req(reactiveVals$indRes)
     HTML(
       reactiveVals$indRes %>%
-        kable(caption = "Indicators arranged from lower scores (top) to higher scores (bottom). Indicators with no scores (NA) are showed on top. 
-              Items on the top of the list are to be targeted first.") %>%
+        kable(caption = "Indicators arranged from lower ratings (top) to higher ratings (bottom). Items on the top of the list are to be targeted first.") %>%
         kable_styling() %>%
-        row_spec(which(reactiveVals$indRes[,2] == "A"), background = "#66CA64") %>%
-        row_spec(which(reactiveVals$indRes[,2] == "B"), background = "#99D970") %>%
-        row_spec(which(reactiveVals$indRes[,2] == "C"), background = "#FFD015") %>%
-        row_spec(which(reactiveVals$indRes[,2] == "D"), background = "#FE8643") %>%
-        row_spec(which(reactiveVals$indRes[,2] == "E"), background = "#FE5660") %>%
+        row_spec(which(reactiveVals$indRes[,2] == "5"), background = "#B5E7A2") %>%
+        row_spec(which(reactiveVals$indRes[,2] == "4"), background = "#C6EFCE") %>%
+        row_spec(which(reactiveVals$indRes[,2] == "3"), background = "#FFEB9C") %>%
+        row_spec(which(reactiveVals$indRes[,2] == "2"), background = "#FFCC99") %>%
+        row_spec(which(reactiveVals$indRes[,2] == "1"), background = "#FFC7CE") %>%
         row_spec(0, extra_css = "border-bottom: 2px solid black;") %>%
         row_spec(0:nrow(reactiveVals$indRes), extra_css = "padding: 2px 4px;")
     )
@@ -1466,14 +1496,13 @@ server <- function(input, output, session) {
     req(reactiveVals$topicRes)
     HTML(
       reactiveVals$topicRes %>%
-        kable(caption = "Topics arranged from lower scores (top) to higher scores (bottom). Topics with no scores (NA) are showed on top. 
-              Items on the top of the list are to be targeted first.") %>%
+        kable(caption = "Dimensions arranged from lower ratings (top) to higher ratings (bottom). Items on the top of the list are to be targeted first.") %>%
         kable_styling() %>%
-        row_spec(which(reactiveVals$topicRes[,2] == "A"), background = "#66CA64") %>%
-        row_spec(which(reactiveVals$topicRes[,2] == "B"), background = "#99D970") %>%
-        row_spec(which(reactiveVals$topicRes[,2] == "C"), background = "#FFD015") %>%
-        row_spec(which(reactiveVals$topicRes[,2] == "D"), background = "#FE8643") %>%
-        row_spec(which(reactiveVals$topicRes[,2] == "E"), background = "#FE5660") %>%
+        row_spec(which(reactiveVals$topicRes[,2] == "5"), background = "#B5E7A2") %>%
+        row_spec(which(reactiveVals$topicRes[,2] == "4"), background = "#C6EFCE") %>%
+        row_spec(which(reactiveVals$topicRes[,2] == "3"), background = "#FFEB9C") %>%
+        row_spec(which(reactiveVals$topicRes[,2] == "2"), background = "#FFCC99") %>%
+        row_spec(which(reactiveVals$topicRes[,2] == "1"), background = "#FFC7CE") %>%
         row_spec(0, extra_css = "border-bottom: 2px solid black;") %>%
         row_spec(0:nrow(reactiveVals$topicRes), extra_css = "padding: 2px 4px;")
     )
@@ -1491,21 +1520,16 @@ server <- function(input, output, session) {
   })
   
   output$catDescription <- renderUI({
+    bg_colors <- c("#B5E7A2", "#C6EFCE", "#FFEB9C", "#FFCC99", "#FFC7CE")
+    
     HTML(
       catMeaning %>%
-        mutate(
-          Category = case_when(
-            row_number() == 1 ~ cell_spec(Category, background = "#66CA64"),
-            row_number() == 2 ~ cell_spec(Category, background = "#99D970"),
-            row_number() == 3 ~ cell_spec(Category, background = "#FFD015"),
-            row_number() == 4 ~ cell_spec(Category, background = "#FE8643"),
-            row_number() == 5 ~ cell_spec(Category, background = "#FE5660"),
-            TRUE ~ Category
-          )
-        ) %>%
-        kable(format = "html", caption = "Maturity categories", escape = FALSE) %>%
+        kable(format = "html", caption = "Maturity levels", escape = FALSE) %>%
         kable_styling() %>%
         row_spec(0, extra_css = "border-bottom: 2px solid black;") %>%
+        column_spec(1, background = bg_colors) %>%
+        column_spec(1, width = "20%") %>%
+        column_spec(2:3, width = "40%") %>%
         row_spec(0:nrow(catMeaning), extra_css = "padding: 2px 4px;") %>%
         collapse_rows(columns = 1:2, valign = "middle")
     )
@@ -1592,6 +1616,42 @@ server <- function(input, output, session) {
       writeDataframeExcel(file)
     }
   )
+  
+  output$overallRatings <- renderUI({
+    if(input$previous == "Yes") {
+      overall_table <- data.frame(
+        Rating = sprintf("%.2f", reactiveVals$overallRating),
+        Maturity = reactiveVals$overallMaturity,
+        Rating_Change = reactiveVals$overallRatingChange,
+        Maturity_Change = reactiveVals$overallMaturityChange
+      )
+      colnames(overall_table) <- c("Current Rating", "Current Maturity Level", "Rating Change", "Maturity Level Change")
+    } else {
+      overall_table <- data.frame(
+        Rating = sprintf("%.2f", reactiveVals$overallRating),
+        Maturity = reactiveVals$overallMaturity
+      )
+      colnames(overall_table) <- c("Rating", "Maturity Level")
+    }
+    reactiveVals$overallTable <- overall_table
+    maturity_bg_color <- case_when(
+      reactiveVals$overallMaturity == "5" ~ "#B5E7A2",
+      reactiveVals$overallMaturity == "4" ~ "#C6EFCE",
+      reactiveVals$overallMaturity == "3" ~ "#FFEB9C",
+      reactiveVals$overallMaturity == "2" ~ "#FFCC99",
+      reactiveVals$overallMaturity == "1" ~ "#FFC7CE",
+      TRUE ~ "white"
+    )
+    HTML(
+      overall_table %>%
+        kable("html", escape = FALSE, caption = "Overall rating and maturity level of the organisation") %>%
+        kable_styling() %>%
+        row_spec(0, extra_css = "border-bottom: 2px solid black;") %>%
+        row_spec(0:1, extra_css = "padding: 2px 4px;") %>%
+        column_spec(2, background = maturity_bg_color)
+    )
+  })
+  
 }
 
 # Run the app ----
