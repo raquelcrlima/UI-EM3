@@ -4,7 +4,7 @@
 
 **Developed By:** Raquel de Castro Rodrigues Lima (PhD Researcher) with Principal Investigators Prof. Eoghan Clifford & Dr. Marcus Martin Keane, School of Engineering, University of Galway.
 
-This code is **© R.C.R. Lima, M.M. Keane, E. Clifford**, (2025) and it is made available under the GPL license enclosed with the software ("LICENSE" file).
+This code is **© University of Galway (authors R.C.R. Lima, M.M. Keane, E. Clifford**), (2025) and it is made available under the GPL license enclosed with the software ("LICENSE" file).
 
 If you use this software for an academic publication, provide proper **attribution**, such as shown below:
 
