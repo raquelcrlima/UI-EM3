@@ -1,32 +1,8 @@
-Package: UIEM3App
-Title: User-Integrated Energy Management Maturity Model (UI-EM3) App
+Title: User-Integrated Energy Management Maturity Model (UI-EM3) tool
 Version: 1.0.0
-Authors@R:
-    person(given = "Raquel",
-           family = "Lima",
-           email = "raquel.lima@universityofgalway.ie",
-           role = c("aut", "cre"))
 Description:
     A Shiny web application developed to assist decision-makers in companies, universities, and schools
     by providing an evaluation of energy management maturity through the integration of user perspectives.
     It was derived from a PhD research project at the University of Galway. The application processes survey
-    responses, calculates maturity levels based on indicators, criteria, and topics, and offers insights
+    responses, calculates maturity levels based on indicators, areas and dimensions, and offers insights
     through comparisons over time, settings, and audiences.
-License: MIT
-Encoding: UTF-8
-LazyData: true
-Imports:
-    shiny,
-    shinydashboard,
-    shinyjs,
-    readxl,
-    dplyr,
-    tidyr,
-    purrr,
-    FSA,
-    knitr,
-    rlang,
-    DT,
-    kableExtra,
-    openxlsx
-RoxygenNote: 7.2.3
