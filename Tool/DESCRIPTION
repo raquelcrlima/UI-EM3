@@ -1,8 +1,0 @@
-Title: UI-EM3 Tool
-Version: 1.0.0
-Description:
-    A Shiny web application developed to assist decision-makers in companies, universities, and schools
-    by providing an evaluation of energy management maturity through the integration of user perspectives.
-    It was derived from a PhD research project at the University of Galway. The application processes survey
-    responses, calculates maturity levels based on indicators, areas and dimensions, and offers insights
-    through comparisons over time, settings, and audiences.
